@@ -143,17 +143,19 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .darkbox {
-  margin-top: 20px;
-  width: 510px;
+  width: 100%;
+  max-width: 620px;
+  height: auto;
   border-radius: 25px;
   /* margin-top: 96px; */
-  height: 160px;
   overflow: hidden;
 
 }
 
 .box {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   flex-direction: row;
   background-color: #222;
   border-radius: 57px;
@@ -192,13 +194,17 @@ body {
   color: white;
 }
 
+
+
 .box_container {
-
-  min-height: 90vh;
-  width: 92vw;
+  min-height: 100vh;
+  width: 100%;
   display: flex;
-
+  justify-content: center;
 }
+
+
+
 
 /* Left side */
 .left {
@@ -250,7 +256,7 @@ body {
   justify-content: center;
   border-radius: 40px 0 0 40px;
   position: relative;
-  width: 35%;
+  width: 30%;
   height: 550px;
   top: 105px;
 
@@ -307,7 +313,7 @@ body {
 .banner {
   display: flex;
   background-color: #0a0a27;
-  width: 90%;
+  width: 100vw;
 }
 
 
@@ -459,8 +465,8 @@ body {
   }
 
   .circle {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     margin: 8px;
   }
 
@@ -499,5 +505,92 @@ body {
 
   .header li {
     font-size: 12px;
+  }
+}
+
+@media (max-width: 992px) {
+  .banner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left {
+    width: 100%;
+    padding: 30px 20px;
+    font-size: 3rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .right {
+    width: 90%;
+    height: auto;
+    position: relative;
+    top: 0;
+    margin-top: 20px;
+  }
+
+  .card-content {
+    height: 350px;
+    border-radius: 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  img {
+    width: 84px;
+    height: 84px;
+  }
+
+  .palette {
+    position: relative;
+    right: 0;
+    height: auto;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 20px;
+  }
+
+  .right_circle {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@media (max-width: 600px) {
+  img 
+  {
+        width: 60px;
+        height: 60px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+
+  .bot {
+    width: 100%;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .circle {
+    width: 55px;
+    height: 55px;
+  }
+
+  .right_circle {
+    width: 75px;
+    height: 75px;
   }
 }
